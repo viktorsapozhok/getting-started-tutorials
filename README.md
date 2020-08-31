@@ -13,4 +13,4 @@ $ pip install -r requirements.txt
 $ make html
 ```
 
-To read the documentation, open file /docs/build/html/index.html in your browser.
+To read the documentation, open file `/docs/build/html/index.html` in your browser.
