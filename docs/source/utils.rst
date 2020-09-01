@@ -34,3 +34,15 @@ Next, remove the PPA from your list of repositories.
 .. code-block:: bash
 
     $ sudo add-apt-repository --remove ppa:linuxuprising/shutter
+
+Google Chrome
+-------------
+
+Download .deb package from the `official page <https://www.google.com/chrome/>`__
+and install it as follows:
+
+.. code-block:: bash
+
+    $ cd Downloads
+    $ sudo dpkg -i google-chrome-stable_current_amd64.deb
+
