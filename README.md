@@ -1,7 +1,7 @@
 # Initial User Setup with Ubuntu 20.04
 
 This tutorial provides a short guide on how to manually configure a new user workplace
-with Ubuntu 20.04 LTS and install basic development tools.
+and install basic development tools on Ubuntu 20.04 LTS.
 
 ## Tutorial
 

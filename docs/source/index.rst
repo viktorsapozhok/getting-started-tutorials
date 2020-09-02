@@ -15,6 +15,7 @@ Tutorial
    zshell
    conda
    docker
+   r
    ide
    utils
 

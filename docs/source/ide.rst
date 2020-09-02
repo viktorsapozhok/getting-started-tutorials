@@ -11,6 +11,13 @@ Run the following command:
 
     $ sudo snap install pycharm-professional --classic
 
-RStudio
--------
+Visual Studio Code
+------------------
+
+Visual Studio Code is officially distributed as a snap package, so
+you can install it by running:
+
+.. code-block:: bash
+
+    $ sudo snap install --classic code
 
