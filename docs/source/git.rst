@@ -52,3 +52,9 @@ Add your SSH private key to the ssh-agent.
 
 Follow this `guide <https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account>`__
 to add a new SSH key to your GitHub account.
+
+Reference
+---------
+
+[1] Connecting to GitHub with SSH
+(`link <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>`__)

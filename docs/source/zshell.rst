@@ -98,3 +98,9 @@ And run the following command to enable it:
     $ echo 'source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 
 Finally restart the shell.
+
+Reference
+---------
+
+[1] How to install ZSH Shell on Ubuntu
+(`link <https://linuxhint.com/install_zsh_shell_ubuntu_1804/>`__)

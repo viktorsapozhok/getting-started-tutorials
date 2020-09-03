@@ -14,3 +14,9 @@ and run it.
 
 When it's installed, open ``~/.bashrc`` and copy lines in the end starting with
 ``# >>> conda initialize >>>`` and paste it to ``~/.zshrc`` in the end of file.
+
+Reference
+---------
+
+[1] Conda command reference
+(`link <https://docs.conda.io/projects/conda/en/latest/commands.html>`__)

@@ -18,15 +18,3 @@ Tutorial
    r
    ide
    utils
-
-Reference
----------
-
-[1] Connecting to GitHub with SSH
-(`link <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>`__)
-
-[2] How to install ZSH Shell on Ubuntu
-(`link <https://linuxhint.com/install_zsh_shell_ubuntu_1804/>`__)
-
-[3] Conda command reference
-(`link <https://docs.conda.io/projects/conda/en/latest/commands.html>`__)
