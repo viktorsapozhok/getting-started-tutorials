@@ -20,4 +20,3 @@ you can install it by running:
 .. code-block:: bash
 
     $ sudo snap install --classic code
-

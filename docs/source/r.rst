@@ -54,22 +54,46 @@ and install it as follows:
     $ cd Downloads
     $ sudo gdebi rstudio-1.3.1073-amd64.deb
 
+.. warning::
+
+    R Base should be installed before RStudio installation.
+
 Conda + R
 ---------
 
-To install R in the existing environment, use this command:
+To install R in the existing environment, you can use one of these commands:
 
 .. code-block:: bash
 
+    $ conda install r-base
     $ conda install -c r r-base
+    $ conda install -c conda-forge r-base
+
+You can verify the package version before installation with ``conda search`` command.
+
+.. code-block:: bash
+
+    $ conda search -c r r-base
+    $ conda search -c conda-forge r-base
+
+.. note::
+
+    Use ``conda-forge`` channel to install the latest R version.
 
 To create a new environment with R, use this:
 
 .. code-block:: bash
 
-    $ conda create -n r_env r-base
+    $ conda create -n r_env -c conda-forge r-base
     $ conda activate r_env
     $ R --version
+
+To install a new R package via conda, you can use e.g. one of the following commands:
+
+.. code-block:: bash
+
+    $ conda install -c r r-packageName
+    $ conda install -c conda-forge r-packageName
 
 To launch RStudio from conda environment, you need first to activate it in a shell
 session and then launch.
@@ -85,11 +109,11 @@ affecting RStudio instance.
 Once in RStudio, you can verify that values of ``R.home()`` and ``.libPaths()`` point
 to the environment-specific location.
 
-Use this command to install R packages via conda:
+.. note::
 
-.. code-block:: bash
-
-    $ conda install -c r r-packageName
+    With the R plugin installed in PyCharm, you can get native support for ``.R`` files.
+    The advantage of using PyCharm is that, in contrast with RStudio, it supports conda
+    virtual environments.
 
 Reference
 ---------
