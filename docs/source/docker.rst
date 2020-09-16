@@ -64,3 +64,33 @@ Test the installation.
 
     $ docker-compose --version
     docker-compose version 1.26.2, build 1110ad01
+
+Run docker as non-root user
+---------------------------
+
+If you want to run docker as non-root user then you need to add it to docker group.
+First, create the docker group if it doesn't exist.
+
+.. code-block:: bash
+
+    $ sudo groupadd docker
+
+Add your user to the docker group.
+
+.. code-block:: bash
+
+    $ sudo usermod -aG docker $USER
+
+Run the following command, if it doesn't work then reboot and run it again.
+
+.. code-block:: bash
+
+    $ newgrp docker
+
+Check if docker can be run as non-root.
+
+.. code-block:: bash
+
+    $ docker run hello-world
+
+Reboot if you got error.
