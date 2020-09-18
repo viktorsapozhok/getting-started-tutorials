@@ -46,24 +46,5 @@ and install it as follows:
     $ cd Downloads
     $ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-DBeaver
--------
-
-DBeaver is free and open source universal database UI. It can be easily installed
-via snap:
-
-.. code-block:: bash
-
-    $ sudo snap install dbeaver-ce
-
-MongoDB Compass
----------------
-
-MongoDB Compass is the GUI for MongoDB. Can be downloaded from `official page <https://www.mongodb.com/try/download/compass>`__
-and installed as following:
-
-.. code-block:: bash
-
-    $ sudo dpkg -i mongodb-compass_1.22.1_amd64.deb
 
 

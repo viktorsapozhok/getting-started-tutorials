@@ -1,5 +1,5 @@
-Dell Inspiron Laptop Setup
-==========================
+Dell Inspiron Laptop
+====================
 
 Disable touchscreen
 -------------------

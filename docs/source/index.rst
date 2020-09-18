@@ -1,21 +1,15 @@
-Initial User Setup with Ubuntu 20.04
-====================================
+#########################
+Getting Started Tutorials
+#########################
 
-This tutorial provides a short guide on how to manually configure a new user workplace
-with Ubuntu 20.04 LTS.
+This documentation contains tutorials mainly on how to configure and getting started
+with various (Python + R) development tools on Ubuntu 20.04 LTS.
 
-Tutorial
---------
+********
+Contents
+********
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   dell
-   git
-   zshell
-   conda
-   docker
-   r
-   dbs
-   ide
-   utils
+   workplace/index

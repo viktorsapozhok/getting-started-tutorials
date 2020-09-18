@@ -1,6 +1,9 @@
 Z Shell
 =======
 
+Install
+-------
+
 Update the package repository cache of your Ubuntu 20.04 LTS operating system
 and then install ZSH.
 
@@ -24,8 +27,8 @@ And restart your machine.
 Open up a terminal after your computer boots and press the number key ``2``.
 ZSH should create a new ``~/.zshrc`` configuration file.
 
-Installing Plugins
-------------------
+Plugins
+-------
 
 Powerline is a status line plugin for ZSH shell. Powerline font lets the ZSH shell
 use different icons and symbols on the shell.
@@ -41,8 +44,8 @@ Run the following command to install ZSH Syntax Highlighting Plugin.
 
     $ sudo apt-get install zsh-syntax-highlighting
 
-Installing Oh-My-ZSH
---------------------
+Oh-My-ZSH
+---------
 
 ZSH has an entire framework Oh-My-ZSH dedicated to work with Git.
 To learn more about Oh-My-ZSH, take a look at the official GitHub page at
@@ -61,8 +64,8 @@ Now run the following command to enable ZSH Syntax Highlighting plugin installed
 
     $ echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 
-Installing Autosuggestions
---------------------------
+Autosuggestions
+---------------
 
 Download zsh-autosuggestions with the following command:
 
@@ -98,9 +101,3 @@ And run the following command to enable it:
     $ echo 'source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 
 Finally restart the shell.
-
-Reference
----------
-
-[1] How to install ZSH Shell on Ubuntu
-(`link <https://linuxhint.com/install_zsh_shell_ubuntu_1804/>`__)

@@ -1,8 +1,8 @@
 Docker
 ======
 
-Install Docker Engine
----------------------
+Docker Engine
+-------------
 
 Update software repositories to make sure you've got access to the latest revisions.
 
@@ -35,8 +35,8 @@ Test the installation verifying docker version.
 
     $ docker --version
 
-Install Docker Compose
-----------------------
+Docker Compose
+--------------
 
 Compose is a tool for defining and running multi-container Docker applications.
 With Compose, you use a YAML file to configure your application’s services.
@@ -65,8 +65,8 @@ Test the installation.
     $ docker-compose --version
     docker-compose version 1.26.2, build 1110ad01
 
-Run docker as non-root user
----------------------------
+Run docker as a non-root user
+-----------------------------
 
 If you want to run docker as non-root user then you need to add it to docker group.
 First, create the docker group if it doesn't exist.

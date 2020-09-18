@@ -1,11 +1,9 @@
-# Initial User Setup with Ubuntu 20.04
+# Getting Started Tutorials
 
-This tutorial provides a short guide on how to manually configure a new user workplace
-and install basic development tools on Ubuntu 20.04 LTS.
-
-## Tutorial
-
-To build the tutorial, install the requirements and build the docs:
+This repository contains tutorials mainly on how to configure and getting started
+with various (Python + R) development tools on Ubuntu 20.04 LTS.
+  
+To build the tutorials, install the requirements and build the docs:
 
 ```
 $ cd docs

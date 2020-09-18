@@ -1,4 +1,4 @@
-project = 'ubuntu-user-setup'
+project = 'getting-started-tutorials'
 copyright = '2020, viktorsapozhok'
 author = 'viktorsapozhok'
 user = 'viktorsapozhok'

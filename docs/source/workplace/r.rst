@@ -114,12 +114,3 @@ to the environment-specific location.
     With the R plugin installed in PyCharm, you can get native support for ``.R`` files.
     The advantage of using PyCharm is that, in contrast with RStudio, it supports conda
     virtual environments.
-
-Reference
----------
-
-[1] How to setup conda installed R with RStudio
-(`link <https://stackoverflow.com/questions/38534383/how-to-set-up-conda-installed-r-for-use-with-rstudio>`__)
-
-[2] List of R packages available in Anaconda
-(`link <http://repo.anaconda.com/pkgs/r/>`__)

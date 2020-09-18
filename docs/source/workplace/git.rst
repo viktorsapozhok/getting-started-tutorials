@@ -1,14 +1,13 @@
-Git Setup
-=========
+Git
+===
 
-Installing Git
---------------
+Install
+-------
 
 .. code-block:: bash
 
     $ sudo apt-get update
     $ sudo apt-get install git
-
 
 After git is installed, set your account's default identity.
 
@@ -34,7 +33,7 @@ If you don't have an existing public and private key pair, then generate a new S
     $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 This creates a new ssh key, using the provided email as a label.
-When you're prompted to "Enter a file in which to save the key," press Enter. 
+When you're prompted to "Enter a file in which to save the key," press Enter.
 This accepts the default file location.
 
 To add the new key to ssh-agent, start the ssh-agent in the background.
@@ -52,9 +51,3 @@ Add your SSH private key to the ssh-agent.
 
 Follow this `guide <https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account>`__
 to add a new SSH key to your GitHub account.
-
-Reference
----------
-
-[1] Connecting to GitHub with SSH
-(`link <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>`__)
