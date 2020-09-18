@@ -1,10 +1,12 @@
 IDE
 ===
 
+This instruction shows how to install PyCharm and VSCode IDEs using snap.
+
 PyCharm
 -------
 
-You can use snap packages to install PyCharm Community edition.
+You can use snap packages to install PyCharm Community Edition.
 Run the following command:
 
 .. code-block:: bash

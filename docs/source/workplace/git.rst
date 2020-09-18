@@ -1,8 +1,11 @@
 Git
 ===
 
-Install
--------
+This guide shows how to install Git using apt package manager and set SSH connection
+with your github account.
+
+Installation
+------------
 
 .. code-block:: bash
 
