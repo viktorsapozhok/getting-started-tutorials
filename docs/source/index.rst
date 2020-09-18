@@ -11,3 +11,4 @@ Contents
    :maxdepth: 2
 
    workplace/index
+   r_conda

@@ -1,5 +1,5 @@
 ######################
-Ubuntu Workplace Setup
+Ubuntu workplace setup
 ######################
 
 Collection of tutorials on how to install and configure Python + R basic development
