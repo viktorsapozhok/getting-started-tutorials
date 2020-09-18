@@ -16,5 +16,6 @@ Tutorial
    conda
    docker
    r
+   dbs
    ide
    utils
