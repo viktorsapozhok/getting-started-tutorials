@@ -8,6 +8,8 @@ with various (Python + R) development tools on Ubuntu 20.04 LTS.
 * Ubuntu workplace setup
 * Using R with conda package manager
 * Getting started with MongoDB shell
+
+### How to build
   
 To build the tutorials, install the requirements and build the docs:
 
