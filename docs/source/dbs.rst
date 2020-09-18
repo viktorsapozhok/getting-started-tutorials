@@ -1,8 +1,0 @@
-Databases
-=========
-
-Postgres
---------
-
-MongoDB
--------
