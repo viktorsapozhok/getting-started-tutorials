@@ -122,7 +122,8 @@ database.
 
 Now we connect to the database and list all the collections.
 
+.. code-block:: bash
+
     $ mongo -u user -p password newdb
     > db.getCollectionNames()
     [ "countries", "newcol" ]
-
