@@ -1,5 +1,10 @@
-Z Shell
+Z shell
 =======
+
+The Z shell or zsh is an interactive UNIX shell and a powerful command-line
+interpreter for scripting languages, including shell scripting. The Z-Shell
+has become one of the most popular shells for the Linux operating system.
+It is rich in features and easy to configure and customize.
 
 Install
 -------

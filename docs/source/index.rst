@@ -8,7 +8,8 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    workplace/index
-   r_conda
+   conda
+   mongo
