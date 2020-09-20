@@ -7,6 +7,7 @@ with various (Python + R) development tools on Ubuntu 20.04 LTS.
 
 * Ubuntu workplace setup
 * Using R with conda package manager
+* Building R package from scratch
 * Getting started with MongoDB shell
 
 ### How to build

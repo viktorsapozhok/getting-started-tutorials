@@ -50,6 +50,12 @@ you will need to use conda install r-rbokeh or for rJava, type conda install r-r
     $ conda install -c r r-packageName
     $ conda install -c conda-forge r-packageName
 
+To install a specific package version, use this:
+
+.. code-block:: bash
+
+    $ conda install -c conda-forge r-packageName=4.0.2
+
 To list the packages in the environment use this:
 
 .. code-block:: bash

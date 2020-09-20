@@ -12,4 +12,5 @@ Contents
 
    workplace/index
    conda
+   rpack
    mongo
