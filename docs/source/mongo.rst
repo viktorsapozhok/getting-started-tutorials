@@ -100,6 +100,71 @@ To connect to "newdb" as user, you need to specify the username and password.
     > db
     newdb
 
+CRUD operations
+---------------
+
+Create or insert operations add new documents to a collection.
+If the collection does not currently exist, insert operations will create the collection.
+
+.. code-block:: bash
+
+    > db.authors.insertMany([
+    ...     {name: "Tolstoy", novels: ["War and Peace", "Anna Karenina"]},
+    ...     {name: "Dostoevsky", novels: ["Crime and Punsihment", "The Idiot", "The Gambler"]},
+    ...     {name: "Nabokov", novels: ["Lolita", "Pnin", "Dar"]}
+    ... ]);
+
+    > db.authors.insert({name: "Turgenev", novels: ["Rudin", "On the Eve"]});
+    WriteResult({ "nInserted" : 1 })
+
+    > db.authors.count();
+    4
+
+    > db.authors.find().limit(2).pretty();
+    { "_id" : ObjectId, "name" : "Tolstoy", "novels" : [ "War and Peace", "Anna Karenina" ] }
+    { "_id" : ObjectId, "name" : "Dostoevsky", "novels" : [ "Crime and Punsihment", "The Idiot", "The Gambler" ] }
+
+Find all the documents where novel title contains "the".
+
+.. code-block:: bash
+
+    > db.authors.find({novels: {$regex: "the"}}).pretty();
+    {
+        "_id" : ObjectId("5f6755637e046d1f1fb2ba02"),
+        "name" : "Turgenev",
+        "novels" : [
+            "Rudin",
+            "On the Eve"
+        ]
+    }
+
+The same query but with case insensitive search.
+
+.. code-block:: bash
+
+    > db.authors.find({novels: {$regex: "the", $options: "i"}});
+    { "_id" : ObjectId, "name" : "Dostoevsky", "novels" : [ "Crime and Punsihment", "The Idiot", "The Gambler" ] }
+    { "_id" : ObjectId, "name" : "Turgenev", "novels" : [ "Rudin", "On the Eve" ] }
+
+Remove all documents with name "Dostoevsky".
+
+.. code-block:: bash
+
+    > db.authors.deleteMany({name: "Dostoevsky"});
+    { "acknowledged" : true, "deletedCount" : 1 }
+    > db.authors.count();
+    3
+
+To remove a collection from database you can use the ``db.collection.drop()``
+helper function.
+
+.. code-block:: bash
+
+    > db.authors.drop()
+    true
+    > db.getCollectionNames()
+    [ "newcol" ]
+
 Import geojson with mongoimport
 -------------------------------
 
@@ -120,10 +185,26 @@ database.
     2020-09-19T14:31:31.451+0200	connected to: mongodb://localhost/
     2020-09-19T14:31:31.457+0200	186 document(s) imported successfully. 0 document(s) failed to import.
 
-Now we connect to the database and list all the collections.
+Let's query all the countries located within a radius 300 km from Belgrade.
+To do this we add ``2dsphere`` index to countries collection.
 
 .. code-block:: bash
 
-    $ mongo -u user -p password newdb
-    > db.getCollectionNames()
-    [ "countries", "newcol" ]
+    > db.countries.createIndex({geometry: "2dsphere"})
+
+The following query uses the ``$near`` operator to return documents
+that are at most 300 km from the specified GeoJSON point.
+
+.. code-block:: bash
+
+    > db.countries.find({
+    ...     geometry: {$near:{
+    ...         $geometry: {type: "Point", coordinates: [20.45, 44.78]},
+    ...         $maxDistance: 300000
+    ...     }}
+    ... }, {properties: 1});
+    { "_id" : ObjectId, "properties" : { "name" : "Serbia" } }
+    { "_id" : ObjectId, "properties" : { "name" : "Bosnia and Herzegovina" } }
+    { "_id" : ObjectId, "properties" : { "name" : "Kosovo" } }
+    { "_id" : ObjectId, "properties" : { "name" : "Montenegro" } }
+    { "_id" : ObjectId, "properties" : { "name" : "Hungary" } }
