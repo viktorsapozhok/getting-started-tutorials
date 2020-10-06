@@ -14,3 +14,4 @@ Contents
    conda
    rpack
    mongo
+   az_principal
