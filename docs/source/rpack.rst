@@ -29,11 +29,11 @@ and empty subdirectory ``R``.
     $ ls
     DESCRIPTION  NAMESPACE  R
 
-Install R package from private GitLab repository
-------------------------------------------------
+Install R package from private repository
+-----------------------------------------
 
 If you want to install an R package from a private repository, first, you need
-to set an SSH authentication in GitLab by adding your SSH keys. Then do the following.
+to set an SSH authentication in your account by adding your SSH keys. Then do the following.
 
 .. code-block:: R
 
@@ -47,7 +47,7 @@ to set an SSH authentication in GitLab by adding your SSH keys. Then do the foll
         credentials = creds)
 
 You can specify a specific branch of the repository as well. In that case,
-just add branch="branch_name" to install_git options. Otherwise, it will always
+just add branch="branch_name" to ``install_git`` options. Otherwise, it will always
 default to the master branch.
 
 Reference
