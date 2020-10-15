@@ -37,6 +37,47 @@ And install the latest version of PostgreSQL:
 
     $ sudo apt-get -y install postgresql
 
+Uninstall
+---------
+
+The simplest way to do this is to open a terminal and type:
+
+.. code-block:: bash
+
+    $ sudo apt-get --purge remove postgresql
+
+This will also prompt you to remove that software that depends on Postgres.
+It is possible that Postgres installs itself in several parts. In that case, a simple:
+
+.. code-block:: bash
+
+    $ dpkg -l | grep postgres
+
+Will get you the list of those packages that Postgres installed. Then, just use
+the same "apt-get --purge remove ...." command but instead of just postgresql,
+type each package name, separated by spaces, like:
+
+.. code-block:: bash
+
+    $ sudo apt-get --purge remove postgresql-client-13 postgresql-client-common pgdg-keyring
+
+As a next step, remove the following folders:
+
+.. code-block:: bash
+
+    $ sudo rm -rf /var/lib/postgresql/
+    $ sudo rm -rf /var/log/postgresql/
+    $ sudo rm -rf /etc/postgresql/
+
+And finally, remove the postgres user and group:
+
+.. code-block:: bash
+
+    $ userdel -r postgres
+    $ groupdel postgres
+
+That's it.
+
 Create user
 -----------
 
@@ -102,6 +143,14 @@ You can create a new role by using the below command from your terminal:
      alex      | Superuser, Create role, Create DB                          | {}
      postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
 
+Use ``createuser --interactive --pwprompt`` to create a new role with password authentication.
+
+You can remove a role using ``DROP ROLE`` statement:
+
+.. code-block:: bash
+
+    postgres=# DROP ROLE alex;
+
 Create a database
 -----------------
 
@@ -115,49 +164,30 @@ When it's created, you can connect to it from shell:
 
 .. code-block:: bash
 
-    $ psql --dbname=research --username=alex
+    $ psql -U alex -d research
     research=#
 
-Uninstall
----------
-
-The simplest way to do this is to open a terminal and type:
+To grant the connect access to the database, use following:
 
 .. code-block:: bash
 
-    $ sudo apt-get --purge remove postgresql
+    postgres=# GRANT CONNECT ON DATABASE dbname TO username;
 
-This will also prompt you to remove that software that depends on Postgres.
-It is possible that Postgres installs itself in several parts. In that case, a simple:
+Create schema
+-------------
 
-.. code-block:: bash
-
-    $ dpkg -l | grep postgres
-
-Will get you the list of those packages that Postgres installed. Then, just use
-the same "apt-get --purge remove ...." command but instead of just postgresql,
-type each package name, separated by spaces, like:
+To create a new schema, execute the following from the postgres shell:
 
 .. code-block:: bash
 
-    $ sudo apt-get --purge remove postgresql-client-13 postgresql-client-common pgdg-keyring
+    postgres=# CREATE SCHEMA new_schema;
 
-As a next step, remove the following folders:
-
-.. code-block:: bash
-
-    $ sudo rm -rf /var/lib/postgresql/
-    $ sudo rm -rf /var/log/postgresql/
-    $ sudo rm -rf /etc/postgresql/
-
-And finally, remove the postgres user and group:
+To give access to a user, use following:
 
 .. code-block:: bash
 
-    $ userdel -r postgres
-    $ groupdel postgres
-
-That's it.
+    postgres=# GRANT USAGE ON SCHEMA schema_name TO username;
+    postgres=# GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA schema_name TO username;
 
 DBeaver
 -------
