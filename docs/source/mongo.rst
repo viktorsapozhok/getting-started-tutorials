@@ -1,5 +1,5 @@
-Getting started with mongo shell
-================================
+Getting started with MongoDB shell
+==================================
 
 The mongo shell is an interactive JavaScript interface to MongoDB.
 You can use the mongo shell to query and update data as well as perform
