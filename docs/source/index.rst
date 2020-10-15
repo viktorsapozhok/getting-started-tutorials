@@ -13,5 +13,6 @@ Contents
    workplace/index
    conda
    rpack
+   postgres
    mongo
    az_principal

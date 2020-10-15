@@ -14,7 +14,6 @@ tools on Ubuntu 20.04 LTS.
    docker
    r
    ide
-   postgres
    mongo
    utils
    laptop

@@ -8,7 +8,9 @@ with various (Python + R) development tools on Ubuntu 20.04 LTS.
 * Ubuntu workplace setup
 * Using R with conda package manager
 * Building R package from scratch
+* Getting started with PostgreSQL
 * Getting started with MongoDB shell
+* Create an Azure service principal with Azure CLI
 
 ### How to build
   
