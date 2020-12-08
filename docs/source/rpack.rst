@@ -56,3 +56,5 @@ Reference
 [1] H.Wickham, J.Bryan, `"R Packages" <https://r-pkgs.org/index.html>`__
 
 [2] `"Making Your First R Package" <https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html>`__
+
+[3] `Package development cheat sheet <https://github.com/rstudio/cheatsheets/blob/master/package-development.pdf>`__
