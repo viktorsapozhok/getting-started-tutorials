@@ -173,6 +173,53 @@ To grant the connect access to the database, use following:
 
     postgres=# GRANT CONNECT ON DATABASE dbname TO username;
 
+Create an Azure Database
+------------------------
+
+Follow `this guide <https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal>`__
+to create an Azure Database for PostgreSQL server by using the Azure portal. When its created and the firewall rule
+configured, you can connect to the server via psql client.
+
+.. note::
+
+    Use the empty database ``postgres`` with admin user.
+
+Run the following command in shell terminal replacing values with your actual server name and admin user login name:
+
+.. code-block:: bash
+
+    psql --host=mydemoserver.postgres.database.azure.com --port=5432 --username=myadmin@mydemoserver --dbname=postgres
+
+List the available databases by issuing ``\list`` command:
+
+.. code-block:: bash
+
+    psql (13.1 (Ubuntu 13.1-1.pgdg20.04+1), server 11.6)
+    SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+    Type "help" for help.
+
+    postgres=> \list
+                                                                   List of databases
+           Name        |      Owner      | Encoding |          Collate           |           Ctype            |          Access privileges
+    -------------------+-----------------+----------+----------------------------+----------------------------+-------------------------------------
+     azure_maintenance | azure_superuser | UTF8     | English_United States.1252 | English_United States.1252 | azure_superuser=CTc/azure_superuser
+     azure_sys         | azure_superuser | UTF8     | English_United States.1252 | English_United States.1252 |
+     postgres          | azure_superuser | UTF8     | English_United States.1252 | English_United States.1252 |
+     template0         | azure_superuser | UTF8     | English_United States.1252 | English_United States.1252 | =c/azure_superuser                 +
+                       |                 |          |                            |                            | azure_superuser=CTc/azure_superuser
+     template1         | azure_superuser | UTF8     | English_United States.1252 | English_United States.1252 | =c/azure_superuser                 +
+                       |                 |          |                            |                            | azure_superuser=CTc/azure_superuser
+    (5 rows)
+
+Now you can create a new database.
+
+.. code-block:: bash
+
+    postgres=> CREATE DATABASE research;
+    CREATE DATABASE
+
+Mission completed!
+
 Create schema
 -------------
 
