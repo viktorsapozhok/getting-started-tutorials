@@ -16,4 +16,5 @@ Contents
    postgres
    mongo
    az_principal
+   aks
    jupyter
