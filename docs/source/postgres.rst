@@ -243,19 +243,19 @@ To copy a table from one database to another we first need to extract table into
 script file and then upload it from script to the target database. We use ``pg_dump``
 utility for dumping table into a script.
 
-.. code-block::bash
+.. code-block:: bash
 
     pg_dump --host=HOST --port=PORT --username=USER --dbname=DB --format=plain --verbose --file=TABLE.sql --table TABLE --data-only
 
 Next, we delete data from the table in target database:
 
-.. code-block::bash
+.. code-block:: bash
 
     db=> DELETE FROM table WHERE 1=1;
 
 Upload table data from the script file.
 
-.. code-block::bash
+.. code-block:: bash
 
     psql --host=HOST --port=PORT --username=USER --dbname=TARGET_DB --file=TABLE.sql
 
