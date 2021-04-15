@@ -259,6 +259,16 @@ Upload table data from the script file.
 
     psql --host=HOST --port=PORT --username=USER --dbname=TARGET_DB --file=TABLE.sql
 
+Remove role
+-----------
+
+To remove a user with all his privileges, issue the following from postgres terminal:
+
+.. code-block:: bash
+
+    db=> DROP OWNED BY user;
+    db=> DROP USER user;
+
 DBeaver
 -------
 
