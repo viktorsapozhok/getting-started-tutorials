@@ -18,3 +18,4 @@ Contents
    az_principal
    aks
    jupyter
+   rtd
