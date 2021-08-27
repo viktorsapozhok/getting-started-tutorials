@@ -13,6 +13,6 @@ Then we can run a basic web server using following:
 
     docker run -it --rm -d -p 8080:80 --name docs -v ~/proj/docs/build/html:/usr/share/nginx/html nginx
 
-Where ``docs`` is a name of the container. 
+Where ``docs`` is a name of the container.
 
 Documentation is now available on http://localhost:8080/

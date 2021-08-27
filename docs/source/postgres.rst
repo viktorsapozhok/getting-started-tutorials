@@ -259,6 +259,31 @@ Upload table data from the script file.
 
     psql --host=HOST --port=PORT --username=USER --dbname=TARGET_DB --file=TABLE.sql
 
+Reset primary key sequence when it falls out of sync
+----------------------------------------------------
+
+Login to database and run the following:
+
+.. code-block:: bash
+
+    SELECT MAX(id) FROM your_table;
+
+The run the following. The result should be higher than the last one.
+
+.. code-block:: bash
+
+    SELECT nextval('your_table_id_seq');
+
+If it's not higher then lock the table to protect against the concurrent inserts
+and update the counter.
+
+.. code-block:: bash
+
+BEGIN;
+    LOCK TABLE your_table IN EXCLUSIVE MODE;
+    SELECT setval('your_table_id_seq', COALESCE((SELECT MAX(id)+1 FROM your_table), 1), false);
+COMMIT;
+
 Remove role
 -----------
 
