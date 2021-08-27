@@ -279,10 +279,10 @@ and update the counter.
 
 .. code-block:: bash
 
-BEGIN;
-    LOCK TABLE your_table IN EXCLUSIVE MODE;
-    SELECT setval('your_table_id_seq', COALESCE((SELECT MAX(id)+1 FROM your_table), 1), false);
-COMMIT;
+    BEGIN;
+        LOCK TABLE your_table IN EXCLUSIVE MODE;
+        SELECT setval('your_table_id_seq', COALESCE((SELECT MAX(id)+1 FROM your_table), 1), false);
+    COMMIT;
 
 Remove role
 -----------
