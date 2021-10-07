@@ -62,7 +62,13 @@ the password key. Make sure you copy this value - it can't be retrieved.
 
 .. note::
 
-    If you forget the password, reset the service principal credentials.
+    If you forget the password or credentials have expired, reset the service principal credentials.
+
+To reset the credentials, use ``reset`` command.
+
+.. code-block:: bash
+
+    $ az ad sp credental reset --name RESEARCH_SERVICE_PRINCIPAL
 
 The ``appId`` and ``tenant`` keys appear in the output of ``az ad sp create-for-rbac``
 and are used in service principal authentication. Record their values,
