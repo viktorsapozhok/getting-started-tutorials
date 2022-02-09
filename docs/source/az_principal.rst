@@ -24,7 +24,7 @@ Manage Azure subscription
 -------------------------
 
 After Azure CLI is installed, you can manage your account using ``az account``
-directive. For example, to get the details of a subscription use following:
+directive. For example, to get the details of your active subscription use following:
 
 .. code-block:: bash
 
@@ -36,6 +36,30 @@ ID returned in the output of the previous command.
 .. code-block:: bash
 
     $ az group list --subscription SubID
+
+In case of multiple subscriptions, you can get a list of all the subscriptions with following:
+
+.. code-block:: bash
+
+    $ az account list --output table
+
+    Name                        CloudName    SubscriptionId      State    IsDefault
+    --------------------------  -----------  ------------------  -------  -----------
+    Enterprise Azure            AzureCloud   8e1d74e4-...        Enabled  True
+    UX-Prod                     AzureCloud   4cc5324a-...        Enabled  False
+    UX-Dev                      AzureCloud   102be302-...        Enabled  False
+
+and switch between them as follows:
+
+.. code-block:: bash
+
+    $ az account set --subscription "UX-Dev"
+
+    Name                        CloudName    SubscriptionId      State    IsDefault
+    --------------------------  -----------  ------------------  -------  -----------
+    Enterprise Azure            AzureCloud   8e1d74e4-...        Enabled  False
+    UX-Prod                     AzureCloud   4cc5324a-...        Enabled  False
+    UX-Dev                      AzureCloud   102be302-...        Enabled  True
 
 Create a service principal
 --------------------------
@@ -68,7 +92,7 @@ To reset the credentials, use ``reset`` command.
 
 .. code-block:: bash
 
-    $ az ad sp credental reset --name RESEARCH_SERVICE_PRINCIPAL
+    $ az ad sp credential reset --name RESEARCH_SERVICE_PRINCIPAL
 
 The ``appId`` and ``tenant`` keys appear in the output of ``az ad sp create-for-rbac``
 and are used in service principal authentication. Record their values,
