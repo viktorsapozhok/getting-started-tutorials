@@ -4,6 +4,44 @@ MongoDB
 Use this tutorial to install MongoDB Community Edition on Ubuntu 20.04 LTS using
 the apt package manager.
 
+Install MongoDB Shell
+-------------------
+
+To use the MongoDB Shell, you must have a MongoDB deployment to connect to. Find installation
+instruction `here <https://www.mongodb.com/docs/mongodb-shell/install/>`__.
+
+Import the public key used by the package management system.
+
+.. code-block:: bash
+
+    $ wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+
+The operation should respond with an ``OK``.
+
+Create a list file for MongoDB.
+
+.. code-block:: bash
+
+    $ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
+Reload local package database.
+
+.. code-block:: bash
+
+    $ sudo apt-get update
+
+Install the ``mongosh`` package.
+
+.. code-block:: bash
+
+    $ sudo apt-get install -y mongodb-mongosh
+
+That's it. Try to connect to MongoDB instance using following.
+
+.. code-block:: bash
+
+    $ mongosh "mongodb://user:password@host:port/dbname"   
+
 Install MongoDB Community Edition
 ---------------------------------
 
