@@ -46,28 +46,32 @@ Compose is a tool for defining and running multi-container Docker applications.
 With Compose, you use a YAML file to configure your application’s services.
 Then, with a single command, you create and start all the services from your configuration.
 
-Run this command to download the current stable release of Docker Compose:
+Read `here <https://docs.docker.com/compose/install/linux/>`__ about the installation.
+
+To download and install the Compose CLI plugin, run:
 
 .. code-block:: bash
 
-    $ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    $ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+    $ mkdir -p $DOCKER_CONFIG/cli-plugins
+    $ curl -SL https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 
 .. note::
 
-    To install a different version of Compose, substitute 1.26.2 with the version of Compose you want to use.
+    To install a different version of Compose, substitute 2.16.0 with the version of Compose you want to use.
 
 Apply executable permissions to the binary.
 
 .. code-block:: bash
 
-    $ sudo chmod +x /usr/local/bin/docker-compose
+    $ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 
 Test the installation.
 
 .. code-block:: bash
 
-    $ docker-compose --version
-    docker-compose version 1.26.2, build 1110ad01
+    $ docker compose version
+    Docker Compose version v2.16.0
 
 Run docker as a non-root user
 -----------------------------

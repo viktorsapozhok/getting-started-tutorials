@@ -1,6 +1,17 @@
 Utilities
 =========
 
+Build-essential
+---------------
+
+The build-essentials packages are the form of meta-packages that are essential to compile software.
+They contain the GNU/g++ compiler collection, GNU debugger, and a few more libraries and tools that are needed
+for compiling a program.
+
+.. code-block:: bash
+
+    $ sudo apt-get install build-essential
+
 Midnight Commander
 ------------------
 

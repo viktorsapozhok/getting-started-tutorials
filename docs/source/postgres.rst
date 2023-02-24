@@ -7,8 +7,20 @@ It is designed to handle a range of workloads, from single machines to data ware
 or web services with many concurrent users. This guide is to give a basic
 understanding of “How to work with Postgres”.
 
-Install
--------
+Install Postgres Client
+-----------------------
+
+If you need postgres client only, e.g. for login to database using ``psql``, then you can install it as follows.
+
+.. code-block:: bash
+
+    $ sudo apt-get install postgresql-client
+
+Note, that client is included in PostgreSQL apt repository. So if you need it with database, then install it
+as described in the next section.
+
+Install PostgreSQL
+------------------
 
 Follow the `official guide <https://www.postgresql.org/download/linux/ubuntu/>`__
 to install Postgres on Ubuntu.
@@ -297,9 +309,9 @@ To remove a user with all his privileges, issue the following from postgres term
 DBeaver
 -------
 
-DBeaver is free and open source universal database UI. It can be easily installed
-via snap:
+DBeaver is free and open source universal database UI. To install it, download ``.deb`` package from `here <https://dbeaver.io/download/>`__
+and install it using ``dpkg``.
 
 .. code-block:: bash
 
-    $ sudo snap install dbeaver-ce
+    $ sudo dpkg -i dbeaver-ce_22.3.5_amd64.deb
