@@ -15,7 +15,5 @@ Contents
    rpack
    postgres
    mongo
-   az_principal
-   aks
    jupyter
    rtd

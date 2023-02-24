@@ -5,7 +5,7 @@ Use this tutorial to install MongoDB Community Edition on Ubuntu 20.04 LTS using
 the apt package manager.
 
 Install MongoDB Shell
--------------------
+---------------------
 
 To use the MongoDB Shell, you must have a MongoDB deployment to connect to. Find installation
 instruction `here <https://www.mongodb.com/docs/mongodb-shell/install/>`__.
@@ -40,7 +40,7 @@ That's it. Try to connect to MongoDB instance using following.
 
 .. code-block:: bash
 
-    $ mongosh "mongodb://user:password@host:port/dbname"   
+    $ mongosh "mongodb://user:password@host:port/dbname"
 
 Install MongoDB Community Edition
 ---------------------------------

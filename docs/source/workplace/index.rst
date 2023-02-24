@@ -12,6 +12,7 @@ tools on Ubuntu 20.04 LTS.
    shell
    conda
    docker
+   az
    r
    ide
    mongo
