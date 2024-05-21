@@ -22,32 +22,20 @@ as described in the next section.
 Install PostgreSQL
 ------------------
 
-Follow the `official guide <https://www.postgresql.org/download/linux/ubuntu/>`__
-to install Postgres on Ubuntu.
+Follow the `official guide <https://www.postgresql.org/download/linux/ubuntu/>`__ in case of questions.
 
-First, create the file repository configuration:
-
-.. code-block:: bash
-
-    $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-
-Then, import the repository signing key:
+Ubuntu includes PostgreSQL by default. To install PostgreSQL on Ubuntu, use the apt command:
 
 .. code-block:: bash
 
-    $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    $ sudo apt install postgresql
 
-Update the package lists:
-
-.. code-block:: bash
-
-    $ sudo apt-get update
-
-And install the latest version of PostgreSQL:
+Also install package ``libpq-dev`` to be able to compile Python packages that depend on
+PostgreSQL, like ``psycopg2``.
 
 .. code-block:: bash
 
-    $ sudo apt-get -y install postgresql
+    $ sudo apt install libpq-dev
 
 Uninstall
 ---------
