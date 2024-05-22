@@ -24,6 +24,15 @@ To install it, you need to enable the universe repository, then update and insta
     $ sudo apt update
     $ sudo apt install mc
 
+LibreOffice
+-----------
+
+If LibreOffice is not installed by default, you can install it by running the following command:
+
+.. code-block:: bash
+
+    $ sudo apt install libreoffice
+
 Shutter
 -------
 

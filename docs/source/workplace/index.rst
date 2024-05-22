@@ -12,9 +12,11 @@ tools on Ubuntu 20.04 LTS.
    shell
    conda
    docker
-   az
-   r
    ide
+   postgres
    mongo
+   vpn
+   az
    utils
+   r
    laptop
