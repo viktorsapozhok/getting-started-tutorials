@@ -4,13 +4,13 @@ Utilities
 Build-essential
 ---------------
 
-The build-essentials packages are the form of meta-packages that are essential to compile software.
-They contain the GNU/g++ compiler collection, GNU debugger, and a few more libraries and tools that are needed
-for compiling a program.
+The build-essentials packages are the form of meta-packages that are essential to
+compile software. They contain the GNU/g++ compiler collection, GNU debugger,
+and a few more libraries and tools that are needed for compiling a program.
 
 .. code-block:: bash
 
-    $ sudo apt-get install build-essential
+    $ sudo apt-get install build-essential gcc libpq-dev
 
 Midnight Commander
 ------------------
@@ -33,27 +33,17 @@ If LibreOffice is not installed by default, you can install it by running the fo
 
     $ sudo apt install libreoffice
 
-Shutter
--------
+yq (YAML Processor)
+-------------------
 
-Shutter is a tool for taking screenshots in Linux. You can take and edit screenshots with it.
-
-.. code-block:: bash
-
-    $ sudo add-apt-repository -y ppa:linuxuprising/shutter
-    $ sudo apt install shutter
-
-To uninstall shutter, you need first to remove it from your system.
+``yq`` is a lightweight and portable command-line YAML processor.
+It can be used to process and manipulate YAML files. It can be installed via snap.
 
 .. code-block:: bash
 
-    $ sudo apt remove shutter
+    $ snap install yq
 
-Next, remove the PPA from your list of repositories.
-
-.. code-block:: bash
-
-    $ sudo add-apt-repository --remove ppa:linuxuprising/shutter
+Check `github repo <https://github.com/mikefarah/yq>`__ for more information.
 
 Google Chrome
 -------------
@@ -65,6 +55,3 @@ and install it as follows:
 
     $ cd Downloads
     $ sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-
-

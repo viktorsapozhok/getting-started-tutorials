@@ -26,12 +26,12 @@ Ubuntu includes PostgreSQL by default. To install PostgreSQL on Ubuntu, use the 
 
     $ sudo apt install postgresql
 
-Also install package ``libpq-dev`` to be able to compile Python packages that depend on
-PostgreSQL, like ``psycopg2``.
+Also install package ``libpq-dev`` and ``gcc`` (if not installed) to be able to
+compile Python packages that depend on PostgreSQL, like ``psycopg2-binary``.
 
 .. code-block:: bash
 
-    $ sudo apt install libpq-dev
+    $ sudo apt install libpq-dev gcc
 
 Uninstall PostgreSQL
 --------------------
