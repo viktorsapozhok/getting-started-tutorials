@@ -14,15 +14,13 @@ Import the public key used by the package management system.
 
 .. code-block:: bash
 
-    $ wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
-
-The operation should respond with an ``OK``.
+    $ wget -qO - https://www.mongodb.org/static/pgp/server-8.0.asc | sudo tee /etc/apt/trusted.gpg.d/mongodb-org-8.0.asc
 
 Create a list file for MongoDB.
 
 .. code-block:: bash
 
-    $ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+    $ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 
 Reload local package database.
 

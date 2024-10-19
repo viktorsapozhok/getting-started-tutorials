@@ -47,7 +47,7 @@ See `here <https://learn.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest
 
 .. code-block:: bash
 
-    $ az aks install-cli
+    $ sudo az aks install-cli
 
 By default, ``kubectl`` and ``kubelogin`` are installed in ``/usr/local/bin``.
 Update your ``PATH`` environment variable to include the directory where ``kubectl``
@@ -56,3 +56,11 @@ and ``kubelogin`` are installed.
 .. code-block:: bash
 
     $ export PATH="/usr/local/bin:$PATH"
+
+Get the credentials for the Kubernetes cluster.
+
+.. code-block:: bash
+
+    $ az aks get-credentials --resource-group <myResourceGroup> --name <myAKSCluster>
+
+It will prompt to login to the Azure account, use ``B`` user for this.
