@@ -16,6 +16,18 @@ and run the installer.
     $ cd /opt/jetbrains-toolbox-2.3.1.31116/
     $ ./jetbrains-toolbox
 
+If you get the following error:
+
+.. code-block:: text
+
+    dlopen(): error loading libfuse.so.2
+
+Install the missing library:
+
+.. code-block:: bash
+
+    $ sudo apt install libfuse2
+
 Log in to your JetBrains Account from the Toolbox App, and it will automatically activate the available
 licenses for any IDE that you install.
 
